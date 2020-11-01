@@ -370,6 +370,7 @@ public class PlayerListener {
                 }
                 if (shouldTriggerFishingIndicator()) { // The logic fits better in its own function
                     main.getUtils().playLoudSound("random.successful_hit", 0.8);
+					KeyBinding.onTick(mc.gameSettings.keyBindUseItem.getKeyCode());
                 }
                 if (timerTick == 20) { // Add natural mana every second (increase is based on your max mana).
                     if (main.getRenderListener().isPredictMana()) {
